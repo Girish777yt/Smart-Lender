@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Result</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header class="topbar"><div class="logo">Smart Lender</div></header>
+  <main class="card result-card">
+    <h2>Prediction Result</h2>
+    <p class="result {{ status_class }}">{% if status_class == 'approved' %}✅ {{ result }}{% else %}❌ {{ result }}{% endif %}</p>
+    {% if record.probability is not none %}
+    <p class="hint">Confidence: <strong>{{ record.probability }}%</strong></p>
+    {% endif %}
+    <div class="hint">You can view all loan entries on the dashboard history page.</div>
+    <a class="btn" href="/predict">Make another prediction</a>
+    <div class="history-summary">
+      <p><strong>Date:</strong> {{ record.timestamp }}</p>
+      <p><strong>Gender:</strong> {{ record.Gender }} | <strong>Married:</strong> {{ record.Married }} | <strong>Credit:</strong> {{ 'Good' if record.Credit_History == 1 else 'Bad' }}</p>
+      {% if record.probability is not none %}
+      <p><strong>Probability:</strong> {{ record.probability }}%</p>
+      {% endif %}
+    </div>
+  </main>
+  <footer class="footer">🔒 Safe & Secure Processing</footer>
+</body>
+</html>

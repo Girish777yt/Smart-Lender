@@ -1,0 +1,23 @@
+[
+  {"Gender":"Male","Married":"Yes","Dependents":"0","Education":"Graduate","Self_Employed":"No","ApplicantIncome":6000.0,"CoapplicantIncome":0.0,"LoanAmount":120.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+  {"Gender":"Female","Married":"Yes","Dependents":"0","Education":"Graduate","Self_Employed":"No","ApplicantIncome":8000.0,"CoapplicantIncome":0.0,"LoanAmount":100.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+  {"Gender":"Male","Married":"Yes","Dependents":"1","Education":"Graduate","Self_Employed":"No","ApplicantIncome":7200.0,"CoapplicantIncome":1200.0,"LoanAmount":150.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Semiurban"},
+  {"Gender":"Female","Married":"Yes","Dependents":"0","Education":"Graduate","Self_Employed":"No","ApplicantIncome":10000.0,"CoapplicantIncome":0.0,"LoanAmount":200.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+  {"Gender":"Male","Married":"Yes","Dependents":"0","Education":"Graduate","Self_Employed":"No","ApplicantIncome":5500.0,"CoapplicantIncome":500.0,"LoanAmount":110.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+  {"Gender":"Female","Married":"Yes","Dependents":"2","Education":"Graduate","Self_Employed":"No","ApplicantIncome":6500.0,"CoapplicantIncome":1500.0,"LoanAmount":140.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+  {"Gender":"Male","Married":"Yes","Dependents":"0","Education":"Graduate","Self_Employed":"No","ApplicantIncome":9000.0,"CoapplicantIncome":2000.0,"LoanAmount":180.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Semiurban"},
+  {"Gender":"Female","Married":"No","Dependents":"0","Education":"Graduate","Self_Employed":"No","ApplicantIncome":7000.0,"CoapplicantIncome":0.0,"LoanAmount":120.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+  {"Gender":"Male","Married":"Yes","Dependents":"1","Education":"Graduate","Self_Employed":"No","ApplicantIncome":4800.0,"CoapplicantIncome":0.0,"LoanAmount":105.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+  {"Gender":"Female","Married":"No","Dependents":"0","Education":"Graduate","Self_Employed":"No","ApplicantIncome":8300.0,"CoapplicantIncome":1200.0,"LoanAmount":130.0,"Loan_Amount_Term":360.0,"Credit_History":1,"Property_Area":"Urban"},
+
+  {"Gender":"Male","Married":"No","Dependents":"3+","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":900.0,"CoapplicantIncome":0.0,"LoanAmount":250.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Female","Married":"No","Dependents":"0","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":1200.0,"CoapplicantIncome":0.0,"LoanAmount":200.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Male","Married":"No","Dependents":"0","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":1500.0,"CoapplicantIncome":0.0,"LoanAmount":180.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Female","Married":"No","Dependents":"2","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":800.0,"CoapplicantIncome":0.0,"LoanAmount":120.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Male","Married":"No","Dependents":"0","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":500.0,"CoapplicantIncome":0.0,"LoanAmount":100.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Female","Married":"No","Dependents":"0","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":400.0,"CoapplicantIncome":0.0,"LoanAmount":150.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Male","Married":"No","Dependents":"3+","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":600.0,"CoapplicantIncome":0.0,"LoanAmount":220.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Female","Married":"No","Dependents":"0","Education":"Not Graduate","Self_Employed":"No","ApplicantIncome":700.0,"CoapplicantIncome":0.0,"LoanAmount":160.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Male","Married":"No","Dependents":"0","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":1000.0,"CoapplicantIncome":0.0,"LoanAmount":190.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"},
+  {"Gender":"Female","Married":"No","Dependents":"1","Education":"Not Graduate","Self_Employed":"Yes","ApplicantIncome":1100.0,"CoapplicantIncome":0.0,"LoanAmount":210.0,"Loan_Amount_Term":360.0,"Credit_History":0,"Property_Area":"Rural"}
+]

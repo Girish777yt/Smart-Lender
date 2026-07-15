@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login - Smart Lender</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  </head>
+<body>
+  <header class="topbar">
+    <div class="logo">Smart Lender</div>
+    <nav class="topnav"><a class="nav-link" href="/">Home</a></nav>
+  </header>
+  <main class="card login-card login-stacked">
+    <h1 class="form-title">Sign In</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, msg in messages %}
+          <div class="flash {{ category }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <form method="post" action="/login" id="loginForm">
+      <label class="field">Username
+        <input id="username" name="username" placeholder="Username" required autofocus>
+      </label>
+      <label class="field">Password
+        <input type="password" name="password" placeholder="Password" required>
+      </label>
+      <button class="btn primary large full" type="submit">Sign In</button>
+      <p class="hint">Demo: <strong>admin</strong> / <strong>password</strong></p>
+    </form>
+
+    <script>
+      // Normalize username before submit: trim and lower-case for convenience
+      document.getElementById('loginForm').addEventListener('submit', function(e){
+        var u = document.getElementById('username');
+        if(u && u.value){
+          u.value = u.value.trim();
+        }
+      });
+    </script>
+    <p style="text-align:center;margin-top:12px"><a href="/">Back to Home</a></p>
+  </main>
+  <footer class="footer">🔒 Safe & Secure Processing</footer>
+</body>
+</html>

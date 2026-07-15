@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Predict Loan</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo"><img src="/static/img/logo.png" alt="logo" style="height:28px;margin-right:8px;vertical-align:middle">Smart Lender</div>
+    <nav class="topnav">
+      {% if session.get('user') %}
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+        <a class="nav-link" href="/logout">Logout</a>
+      {% else %}
+        <a class="nav-link" href="/login">Login</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1>Apply for a Loan</h1>
+    <p class="subtitle">Quick &amp; Easy Loan Approval Prediction</p>
+  </main>
+
+  <main class="card form-card">
+    <form method="post" action="/predict">
+      <h2 class="section-title">Personal Information</h2>
+      <hr class="divider">
+      <label class="field">Gender
+        <select name="gender" required>
+          <option value="" disabled selected>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </label>
+
+      <label class="field">Married
+        <select name="married" required>
+          <option value="" disabled selected>Select</option>
+          <option>Yes</option>
+          <option>No</option>
+        </select>
+      </label>
+
+      <label class="field">Dependents
+        <select name="dependents" required>
+          <option value="" disabled selected>Select</option>
+          <option>0</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3+</option>
+        </select>
+      </label>
+
+      <label class="field">Education
+        <select name="education" required>
+          <option value="" disabled selected>Select</option>
+          <option>Graduate</option>
+          <option>Not Graduate</option>
+        </select>
+      </label>
+
+      <h2 class="section-title">Loan Details</h2>
+      <hr class="divider">
+
+      <label class="field">Applicant Income
+        <input name="applicant_income" placeholder="Applicant Income">
+      </label>
+
+      <label class="field">Coapplicant Income
+        <input name="coapplicant_income" placeholder="Coapplicant Income">
+      </label>
+
+      <label class="field">Loan Amount
+        <input name="loan_amount" placeholder="Loan Amount">
+      </label>
+
+      <label class="field">Loan Amount Term
+        <input name="loan_term" value="360">
+      </label>
+
+      <label class="field">Credit History
+        <select name="credit_history">
+          <option value="1">Good (1)</option>
+          <option value="0">Bad (0)</option>
+        </select>
+      </label>
+
+      <label class="field">Property Area
+        <select name="property_area">
+          <option>Urban</option>
+          <option>Semiurban</option>
+          <option>Rural</option>
+        </select>
+      </label>
+
+      <div class="hint">Use the form fields below to see a loan approved or rejected based on the details entered.</div>
+      <div style="margin-top:18px">
+        <button class="btn primary full">Predict Loan</button>
+      </div>
+    </form>
+    <!-- sample cards removed per request -->
+  </main>
+  <footer class="footer">🔒 Safe &amp; Secure Processing</footer>
+</body>
+</html>

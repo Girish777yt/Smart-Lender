@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - Smart Lender</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+  </head>
+<body>
+  <header class="topbar">
+    <div class="logo">Smart Lender</div>
+    <nav class="topnav">
+      <span class="nav-user">Hello, {{ user }}</span>
+      <a class="nav-link" href="/predict">Predict</a>
+      <a class="nav-link" href="/logout">Logout</a>
+    </nav>
+  </header>
+  <main class="card">
+    <h2>Dashboard</h2>
+    <p class="subtitle">Quick actions</p>
+    <div class="actions" style="display:flex;flex-direction:column;gap:12px">
+      <a class="btn primary" href="/predict">New Loan Prediction</a>
+      <a class="btn" href="#">View Applications (sample)</a>
+    </div>
+    <section style="margin-top:16px">
+      <h3>Overview</h3>
+      <div class="stats">
+        <div class="stat">Total Applications<br><strong>{{ total }}</strong></div>
+        <div class="stat">Approved<br><strong>{{ approved }}</strong></div>
+        <div class="stat">Rejected<br><strong>{{ rejected }}</strong></div>
+      </div>
+    </section>
+
+    <section style="margin-top:22px">
+      <h3>Loan History</h3>
+      {% if history %}
+      <div class="history-table">
+        <div class="history-row history-header">
+          <div>Date</div>
+          <div>Result</div>
+          <div>Applicant Income</div>
+          <div>Loan Amount</div>
+          <div>Credit</div>
+        </div>
+        {% for item in history|reverse %}
+        <div class="history-row">
+          <div>{{ item.timestamp }}</div>
+          <div class="history-status {{ item.result|lower }}">{{ item.result }}</div>
+          <div>{{ item.ApplicantIncome }}</div>
+          <div>{{ item.LoanAmount }}</div>
+          <div>{{ 'Good' if item.Credit_History == 1 else 'Bad' }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="hint">No loan history yet. Submit a prediction to start tracking applications.</p>
+      {% endif %}
+    </section>
+  </main>
+  <footer class="footer">🔒 Safe & Secure Processing</footer>
+</body>
+</html>

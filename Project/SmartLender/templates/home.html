@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Lender</title>
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">Smart Lender</div>
+    <nav class="topnav">
+      {% if session.get('user') %}
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+        <a class="nav-link" href="/logout">Logout</a>
+      {% else %}
+        <a class="nav-link" href="/login">Login</a>
+      {% endif %}
+    </nav>
+  </header>
+  <main class="card">
+    <h1>Loan Approval Prediction System</h1>
+    <p class="subtitle">Enter your details after clicking Predict Loan Approval</p>
+    <div class="actions">
+      <a class="btn primary" href="/predict">Predict Loan Approval</a>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="secure">🔒 Safe & Secure Processing</div>
+  </footer>
+</body>
+</html>
